@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex direction</title>
+    <style>
+        .container{
+            width: 80%;
+            height: 1500px;
+            background-color: #ccc;
+            /* padding: 10px; */
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            /* flex-start 從flex起始處開始排 */
+            /* flex-end 從flex結束處開始排 */
+            /* center置中 */
+            /* space-between 靠端點均分 */
+            /* space-around 將剩餘空間平均分配於區塊兩側 */
+            /* space-evenly 將剩餘空間均分安插在區塊間包含起始處與結束處 */
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">link</div>
+        <div class="box">logo</div>
+        <div class="box">icons</div>
+    </div>
+</body>
+</html>

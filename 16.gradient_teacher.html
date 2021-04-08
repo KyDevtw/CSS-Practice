@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .grad1 {
+            background: linear-gradient(rgb(226, 150, 150), rgb(148, 148, 245));
+            ;
+        }
+
+        .grad2 {
+            background: linear-gradient(to right, rgb(226, 150, 150), rgb(148, 148, 245));
+            ;
+        }
+
+        .grad3 {
+            background: linear-gradient(135deg, red, orange, yellow, green, blue, purple);
+            ;
+        }
+
+        .grad4 {
+            background: linear-gradient(to right, red 50%, purple 50%);
+            ;
+        }
+
+        .grad5 {
+            background: linear-gradient(to left, rgba(0, 0, 255, 0), rgb(98, 98, 238));
+
+            ;
+        }
+
+        .grad6 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        .grad7 {
+            background: linear-gradient(rgb(255, 0, 0) 50%, rgb(159, 159, 250) 50%);
+            ;
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+</body>
+
+</html>

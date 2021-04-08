@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex grow</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: #ccc;
+            /* padding: 10px; */
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+
+        .box{
+            width: 50px;
+            /* height: 200px; */
+            background-color: #f55;
+            /* margin: 0 10px; */
+        }
+
+        .box1{
+            line-height: 2rem;
+            background-color: #55f;
+            flex-shrink: 2;
+            flex-basis: 0;
+            flex-grow: 1;
+            /* grow, shrink, basis時常一起使用 */
+        }
+
+        .box2{
+            line-height: 10rem;
+            /* flex-grow: 2; */
+            /* flex-basis: 0;
+            flex-grow: 1; */
+            flex:1 0 0;
+            /* grow, shrink, basis 寫在一起用 flex: grow shrick basis; */
+        }
+
+        .box3{
+            /* flex-grow: 2; */
+            /* flex-basis: 0;
+            flex-grow: 1; */
+            flex:1 0 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">link</div>
+        <div class="box box2">logo</div>
+        <div class="box box3">icons</div>
+    </div>
+</body>
+</html>

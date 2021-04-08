@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex direction</title>
+    <style>
+        .container{
+            margin:0 auto;
+            width: 80%;
+            height: 1500px;
+            background-color: #ccc;
+            padding: 10px;
+            display: flex;
+            flex-direction:row;
+            /* display: flex下再父層只對子層作用 */
+            /* flex-direction有row column兩個屬性影響排列方向與順序跟xy沒有直接關連 */
+            /* reverse後的row column會改變xy軸的計算方向 */
+            /* 預設為flex:row; */
+        }
+
+        .box{
+            width: 30%;
+            height: 200px;
+            margin: 5px;
+            background-color: #55f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+</body>
+</html>

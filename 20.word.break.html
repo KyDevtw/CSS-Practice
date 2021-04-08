@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word wrap</title>
+    <style>
+        .container{
+            max-width: 70%;
+            margin: 0 auto;
+        
+        }
+        
+        p{
+            border: 1px solid #000;
+            font-size: 20px;
+        }
+        
+        .normal{
+            word-break: normal;
+            word-wrap: break-word;
+            /* 預設斷行 */
+            /* word-wrap把過長的單字在斷行後normal或keep-all時強制換行 */
+            /* word-wrap: break-word會與normal同一行 */
+
+        }
+
+        .break_all{
+            word-break: break-all;
+            /* 英文強制單字斷行 */
+
+        }
+
+        .keep_all{
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+        /* 中文強制標點符號換行 */
+        /* word-wrap把過長的單字在斷行後normal或keep-all時強制換行,中文也適用 */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. ​Pneumonoultramicroscopicsilicovolcanoconiosis Ut consequatur provident aut quibusdam et, temporibus adipisci id modi enim officia deleniti ullam deserunt aperiam qui itaque sequi vel quidem blanditiis. 這樣只要到了說了文檔，人群還是有了受到立場取消家長這一執行忘記治理他就，那種笑容一份最高美容留言板標題支撐小七倒是，執行回憶結合利益，完整我也妻子江湖我覺得還不日子之一右鍵印象日前，不住把它無論要去一張女士，有時住宅解決輕易節省證件化學上午選項較高，說出。</p>
+
+        <p class="break_all">Lorem ipsum dolor sit amet consectetur adipisicing elit. ​Pneumonoultramicroscopicsilicovolcanoconiosis Ut consequatur provident aut quibusdam et, temporibus adipisci id modi enim officia deleniti ullam deserunt aperiam qui itaque sequi vel quidem blanditiis. 這樣只要到了說了文檔，人群還是有了受到立場取消家長這一執行忘記治理他就，那種笑容一份最高美容留言板標題支撐小七倒是，執行回憶結合利益，完整我也妻子江湖我覺得還不日子之一右鍵印象日前，不住把它無論要去一張女士，有時住宅解決輕易節省證件化學上午選項較高，說出。</p>
+
+        <p class="keep_all">Lorem ipsum dolor sit amet consectetur adipisicing elit. ​Pneumonoultramicroscopicsilicovolcanoconiosis Ut consequatur provident aut quibusdam et, temporibus adipisci id modi enim officia deleniti ullam deserunt aperiam qui itaque sequi vel quidem blanditiis. 這樣只要到了說了文檔，人群還是有了受到立場取消家長這一執行忘記治理他就，那種笑容一份最高美容留言板標題支撐小七倒是，執行回憶結合利益，完整我也妻子江湖我覺得還不日子之一右鍵印象日前，不住把它無論要去一張女士，有時住宅解決輕易節省證件化學上午選項較高，說出。</p>
+    </div>
+</body>
+</html>

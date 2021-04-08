@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float layout</title>
+    <style>
+        .container{
+            width: 90%px;
+            margin: 30px auto;
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header{
+            background-color: #faa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu{
+            background-color: #ffa;
+            float: left;
+            /* 浮左邊 */
+            width: 20%;
+            margin-right: 5%;
+            min-height: 200px;
+            margin-bottom: 10px;
+            /* float是塞的下就浮上去要注意margin, border等等佔有寬度的屬性,才可以浮上去 */
+        }
+
+        .content{
+            background-color: #aff;
+            float: right;
+            /* 浮右邊 */
+            width: 75%;
+            /* border: 1px solid #ccc; */
+            min-height: 200px;
+            margin-bottom: 10px;
+        }
+
+        /* clear fix */
+        .footer{
+            background-color: #afa;
+            margin-bottom: 10px;
+            width: 100%;
+            clear: both;
+            /* foot是最後一個區塊也不下float,下了clear:both後會清除前面float屬性對他的影響自己往下繼續排版 */
+            /* 後面可以在接有float屬性的區塊往下float排版,但要讓container fit所有的區塊最後還要再一個有clear屬性的區塊 */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">menu</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+        <div class="menu">menu</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

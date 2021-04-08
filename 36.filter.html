@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <style>
+        .grayscale{
+            filter:grayscale(1);
+        }
+
+        .sepia{
+            filter:sepia(1);
+        }
+
+        .saturate{
+            filter:saturate(0.5);
+        }
+
+        .drop-shadow{
+            filter: drop-shadow(5px 5px 5px #333);
+            /* 跟box-shadow差異在 png檔只在有顏色的地方產生陰影 */
+        }
+        /*  Grayscale 灰階  filter:grayscale(1);
+            Sepia 懷舊 filter:sepia(1);
+            Saturate 飽和  filter:saturate(0.5);
+            Hue-rotate 色相旋轉 filter:hue-rotate(90deg);
+            Invert 負片 filter:invert(1);
+            Opacity 不透明 filter:opacity(.2);
+            Brightness 亮度 brightness(.5);
+            Contrast 對比 contrast(2);
+            Blur 模糊 filter:blur(3px);
+            Drop-shadow 下拉陰影  filter:drop-shadow(5px 5px 5px #333);
+            混合: filter: contrast(200%) brightness(150%);
+         */
+         /* 0-1是0-100%但有些可以超過100% */
+
+    </style>
+</head>
+<body>
+    <img class="grayscale" src="./images/nook_small.jpg" alt="">
+    <img class="sepia" src="./images/nook_small.jpg" alt="">
+    <img class="saturate" src="./images/nook_small.jpg" alt="">
+    <img class="drop-shadow" src="./images/nook_small.jpg" alt="">
+</body>
+</html>

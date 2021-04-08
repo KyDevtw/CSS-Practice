@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corelab 10-3</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 30px;
+        }
+
+        .matrix-input {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="matrix-input">
+            <h1>Corelab 10-3</h1>
+            <label for="">Matrix:(</label>
+            <label for="a">a:</label>
+            <input type="text" name="a" id="a" value="1" class="input">
+            <label for="b">,b:</label>
+            <input type="text" name="b" id="b" value="0" class="input">
+            <label for="c">,c:</label>
+            <input type="text" name="c" id="c" value="0" class="input">
+            <label for="d">,d:</label>
+            <input type="text" name="d" id="d" value="1" class="input">
+            <label for="e">,e:</label>
+            <input type="text" name="e" id="e" value="1" class="input">
+            <label for="f">,f:</label>
+            <input type="text" name="f" id="f" value="1" class="input">
+            <label for="">)</label>
+            <br><br>
+            <label for="b">b:</label>
+            <input id="range-b" type="range" min="0" max="1" step=".01" value="0" style="width:300px;">
+            <br><br>
+            <label for="c">c:</label>
+            <input id="range-c" type="range" min="0" max="1" step=".01" value="0" style="width:300px;">
+
+        </div>
+        <div class="result-area">
+            <label for="">result:</label>
+            <div class="result-box"
+                style="width:200px;height: 200px;background-color:peru;transform: matrix(1, 0, 0, 1, 1, 1);"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function startTranform(){
+            $('.result-box').css({ transform: `matrix(${$('#a').val()},${$('#b').val()},${$('#c').val()},${$('#d').val()},${$('#e').val()},${$('#f').val()})` })
+        }
+
+        $('.input').on('change paste keyup', function () {
+            startTranform();
+            $('#range-b').val($('#b').val())
+            $('#range-c').val($('#c').val())
+        });
+
+        $('#range-b').on('change',function(){
+            $('#b').val($('#range-b').val())
+            startTranform();
+        });
+
+        $('#range-c').on('change',function(){
+            $('#c').val($('#range-c').val())
+            startTranform();
+        });
+
+    </script>
+</body>
+
+</html>

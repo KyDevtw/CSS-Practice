@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background size</title>
+    <style>
+        .city {
+            max-width: 800px;
+            /* max可以設定最大值,這樣瀏覽器縮小時會跟著縮小但放大時超過800即不會再放大 */
+            height: 250px;
+            background: url("./images/city.jpg") center center no-repeat;
+            background-size: 300px 300px;
+            margin: 10px;
+            outline: 1px solid #ccc;
+        }
+
+        .contain {
+            background-size: contain;
+            /* contain任一邊滿圖就不再縮放 */
+        }
+
+        .cover {
+            background-size: cover;
+            /* cover縮放至所有邊都滿圖 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city"></div>
+    <div class="city contain"></div>
+    <div class="city cover"></div>
+
+</body>
+
+</html>

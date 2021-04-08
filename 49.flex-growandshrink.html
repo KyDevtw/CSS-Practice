@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex grow and shrink</title>
+    <style>
+        .container{
+            width: 80%;
+            height: 500px;
+            background-color: #ccc;
+            /* padding: 10px; */
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+
+        .box{
+            width: 50px;
+            line-height: 10rem;
+            /* height: 200px; */
+            background-color: #55f;
+            margin: 0 10px;
+        }
+
+        .box1{
+            line-height: 10rem;
+            /* flex-grow: 2; */
+            background-color: #f55;
+            flex-grow: 2;
+            /* shrink會依權重收縮避免爆版(預設值為1) */
+        }
+
+        .box2{
+            line-height: 10rem;
+            flex-grow: 2;
+            /* grow會依權重外擴填滿版(預設值為0,不會自動擴大) */
+        }
+
+        .box3{
+            flex-grow: 2;
+        }
+
+        /* grow and shrink 屬性值的數字為比例分配 */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">link</div>
+        <div class="box box2">logo</div>
+        <div class="box box3">icons</div>
+    </div>
+</body>
+</html>

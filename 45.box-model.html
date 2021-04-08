@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            /* box-sizing預設為content-box,通常會統一先修改為border-box */
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #33f;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 10px solid rgb(241, 86, 86);
+            /* 下 width and height的值是依box-sizing去執行 */
+        }
+
+        /* 行內元素沒有高的屬性,區塊元素天生帶有長寬屬性 */
+    </style>
+</head>
+<body>
+    <div class="box">123</div>
+</body>
+</html>

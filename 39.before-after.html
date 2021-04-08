@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before after</title>
+    <style>
+        body::after{
+            content: "hi";
+            /* ::是公式了,::after是直接加在選擇到的物件之後新增 content */
+        }
+        .price{
+            color: lightcoral;
+        }
+
+        .price::before{
+            content: '$';
+            color: lightgreen;
+             /* ::是公式了,::before是直接加在選擇到的物件之前新增 content */
+             /* 可以直接在::內直接在設定css樣式   */
+        }
+
+        .price::after{
+            content: '元';
+        }
+    </style>
+
+</head>
+<body>
+    <p>3001</p>
+
+
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+    <div class="products">
+
+        <img src="" alt="">
+
+        <p>Lorem ipsum dolor sit amet.
+
+        </p>
+
+        <p class="price">3003</p>
+    </div>
+</body>
+</html>

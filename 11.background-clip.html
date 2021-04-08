@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background clip</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: url('./images/back1.jpg');
+            float: left;
+            margin: 10px;
+            border: 10px dashed rgba(204, 204, 204, 0.534);
+            padding: 20px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            float: left;
+            margin: 10px;
+            border: 10px dashed rgba(204, 204, 204, 0.534);
+            padding: 20px;
+        }
+
+        .border-box {
+            background-clip: border-box;
+            /* background-clip設定背景的裁切位置,border-box以border左上角開始 */
+            /* background-clip預設為border-box */
+        }
+
+        .content-box {
+            background-clip: content-box;
+            /* background-clip設定背景的裁切位置,content-box以content左上角開始 */
+        }
+
+        .padding-box{
+            background-clip: padding-box;
+        }
+        /* background-clip設定背景的裁切位置,padding-box以padding左上角開始 */
+    </style>
+</head>
+
+<body>
+    <div class="box border-box"></div>
+    <div class="box padding-box"></div>
+    <div class="box content-box"></div>
+    <div class="box2 border-box"></div>
+    <div class="box2 padding-box"></div>
+    <div class="box2 content-box"></div>
+</body>
+
+</html>

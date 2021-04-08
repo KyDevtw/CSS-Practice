@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+
+        .container{
+            background-color: #000;
+            position: relative;
+            /* position:relative會繼承父層長寬資料,absolute則會拋棄父層資料套用自己本身長寬資料 */
+        }
+
+        .background {
+            /* width: 800px; */
+            /* width: auto; */
+            height: 500px;
+            background: url("./images/Musee\ du\ Louvre.jpg") center center no-repeat;
+            background-size: cover;
+            opacity: 1;
+            transition: .3s
+        }
+
+        h1 {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            position: absolute;
+            /* position會往前找另一個position對位 */
+            bottom: 10px;
+            /* 置中1 */
+            /* left: calc(50% - 35px); */
+            /* calc是計算機 運算符號前後要空格才會運算 */
+            /* 置中2 */
+            /* left: 50%;
+            transform: translateX(-50%); */
+            /* translate是改變X軸的位置 */
+            /* 置中3 */
+            width: 100%;
+            /* 原本text-align會找父層對位但下了absolute之後寬度抓Paris本身,再下一個寬度百分比讓text-align去抓 */
+            text-align: center;
+            opacity: .3;
+            transition: .3s
+        }
+
+        .container:hover .text{
+            opacity: 1;
+            /* 如果游標移動到container上時,改變 .text */
+        }
+
+        .container:hover .background{
+            opacity: .5;
+            /* 如果游標移動到container上時,改變 .background */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <h1 class="text">Paris</h1>
+    </div>
+</body>
+
+</html>

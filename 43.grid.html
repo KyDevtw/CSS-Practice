@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+            width: 90%;
+            height: calc(100vh - 40px);
+            /* 螢幕寬減去padding and border寬度 */
+            background-color: #ccc;
+            padding: 10px;
+            display: grid;
+            border: 10px solid transparent;
+            /* display grid(網格)下在要切割的父層 */
+            grid-template-columns: 30% auto; 
+            grid-template-rows:  33% 33% 1fr auto ;
+            /* 列:水平切割; 行:垂直切割 */
+            /* grid切割直接下尺寸,尺寸間用空白鍵區隔 */
+            /* fr是一種按照比例分割的單位,餘下的grid會按照fr比例分配尺寸 */
+            /* fr對上auto時auto只會取得最小值(跟著內容的最長寬一起算) */
+            gap:5px 5px;
+            /* 如果box有填塞要分開可以用gap撐開grid之間的間距 可以欄列分開寫row-gap, column-gap */
+        }
+
+        .autobox{
+            padding: 3px;
+            /* 要撐開grid兼具可以用padding */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="autobg">box1</div>
+        <div class="autobg">box2</div>
+        <div class="autobg">box3</div>
+        <div class="autobg">box4</div>
+        <div class="autobg">box5</div>
+        <div class="autobg">box6</div>
+        <div class="autobg">box7</div>
+        <div class="autobg">box8</div>
+        <!-- <div class="autobg">box7</div>
+        <div class="autobg">box8</div>
+        <div class="autobg">box9</div>
+        <div class="autobg">box10</div>
+        <div class="autobg">box11</div>
+        <div class="autobg">box12</div> -->
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script>
+     function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+    }
+    
+    function getRBGA() {
+        return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+    }
+    
+    const elements = document.querySelectorAll('.autobg');
+    
+    Array.from(elements).forEach((element, index) => {
+        element.style.backgroundImage = getRBGA();
+    });
+    
+    // $('.autobg').each(function (index, currentElement) {
+    //     currentElement.style.backgroundImage = getRBGA();
+    // });
+    </script>
+</body>
+</html>

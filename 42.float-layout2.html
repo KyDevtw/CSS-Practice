@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float layout</title>
+    <style>
+        .container{
+            width: 800px;
+            margin: 30px auto;
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header{
+            background-color: #faa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu{
+            background-color: #ffa;
+            float: left;
+            width: 20%;
+            margin-right: 5%;
+            min-height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .content{
+            background-color: #aff;
+            float: right;
+            width: 75%;
+            /* border: 1px solid #ccc; */
+            min-height: 200px;
+            margin-bottom: 10px;
+        }
+
+        /* clear fix */
+        .footer{
+            background-color: #afa;
+            width: 100%;
+        }
+
+        .clear-fix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* 用class在父層新增::after這樣下class的時候會產生帶有clear的空區塊在結尾 */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="main clear-fix">
+            <div class="menu">menu</div>
+            <div class="content">content</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

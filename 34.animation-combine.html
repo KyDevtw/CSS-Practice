@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation combine</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            animation: changeBGColor 1s infinite alternate, moving 1.5s infinite alternate;
+            /* 多個動畫可以用逗號分開 */
+            /* 將動畫效果合併成一行的寫法 animation: name 5s linear 2s infinite alternate; */
+            /* 動畫名 動畫時間 變速效果 延遲時間 次數 方向 */
+            position: relative;
+            left: 0;
+        }
+
+        @keyframes changeBGColor {
+            from{
+                background-color: #afa;
+            }
+
+            to{
+                background-color: pink;
+            }
+        }
+
+        @keyframes moving {
+            0%{
+                left: 0px;
+            }
+
+            100%{
+                left: 300px;
+            }   
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

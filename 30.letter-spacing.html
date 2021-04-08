@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter spacing</title>
+    <style>
+        .container{
+            width: 500px;
+            background-color: #afa;
+            padding: 10px;
+        }
+
+        p{
+            letter-spacing: 1.5rem;
+            text-align: center;
+            background-color: #faa;
+            text-indent: 1.5rem;
+            line-height: 1.2;
+            /* line-height沒有單位是倍數 */
+            /* 透過letter-spacing把補上最右邊字距的空間長度 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum</p>
+    </div>
+</body>
+</html>

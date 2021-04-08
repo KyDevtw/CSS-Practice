@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .wrap{
+            width: 1000px;
+            height: 1000px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            filter: blur(9px);
+            background-color: rgb(76, 245, 174);
+            transition: width 3s ease, height 3s ease, background-color 3s;
+            /* transition屬性可以分開寫
+            第一個是property為css有數字變化的屬性,第二個為duration屬性變化時間單位為秒,第三個為timing-function動畫變速效果,第四個是delay,不同property間用逗號隔開不同屬性值間用空白鍵 */
+            /* 
+            transition-property: css 屬性(例如寬度、顏色) 預設為all
+            transition-duration: 屬性變化時間，單位為秒
+            transition-timing-function  動畫變速效果
+            屬性值:inear, ease(default), ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n) 
+            貝茲曲線網站:http://cubic-bezier.com/
+            transition-delay: 2s  動畫延遲時間
+            以上四個屬性值可以拆開來寫
+             */
+
+            transition-timing-function: ease;
+        }
+
+        .box2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            filter: blur(9px);
+            background-color: rgb(231, 204, 179);
+            transition: width 3s ease, height 3s ease, background-color 3s;
+        }
+
+        .box3 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            filter: blur(9px);
+            background-color: rgb(247, 245, 154);
+            transition: width 3s ease, height 3s ease, background-color 3s;
+        }
+
+        .wrap:hover .box,.wrap:hover  .box2,.wrap:hover  .box3{
+            width: 100px;
+            height: 100px;
+            filter: contrast(30px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

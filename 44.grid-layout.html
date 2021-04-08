@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .container{
+            width: 90%;
+            height: 430px;
+            background-color: #ccc;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 100px auto 100px;
+            grid-template-areas: 
+            "header header"
+            "menu content"
+            "footer footer";
+            /* 透過grid-template-areas連結要相連的grid */
+            /* header menu 等等是自訂義的名稱 */
+        }
+
+
+        .header{
+            grid-area: header;
+            background-color: rgb(46, 170, 219);
+        }
+
+        /* 要透過class將grid-area命名讓grid-template-areas辨識 */
+
+        .menu{
+            grid-area: menu;
+            background-color: cadetblue;
+        }
+
+        .content{
+            grid-area: content;
+            background-color: rgb(169, 214, 216);
+        }
+
+        .footer{
+            grid-area: footer;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">menu</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

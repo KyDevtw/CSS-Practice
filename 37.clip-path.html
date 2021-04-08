@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip path</title>
+
+    <style>
+        .circle{
+            clip-path:circle(30% at 50% 30%); 
+        }
+        /* clip-path圖片裁切 */
+        /* circle 正圓(x,y) */
+        /* 第一個可以用px表示圓的半徑 */
+
+        .ellipse{
+            clip-path:ellipse(25% 50% at 50% 50%);
+            /* ellipse橢圓 x軸 y軸 at 圓心 x軸 y軸 */
+        }
+
+        .polygon3{
+            clip-path:polygon(0% 100%, 50% 0%,100% 100%);
+            /* 多邊形裁切, x軸 y軸 at 第一個點 x軸y軸 以此類推 */
+        }
+
+        .polygon4{
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+            /* 簍空可以用銜接方式模擬 */
+        }
+
+        /* 多邊形產生器 http://bennettfeely.com/clippy/ */
+    </style>
+</head>
+<body>
+    <img class="circle" src="./images/ex1_pic1.jpg" alt="">
+    <img class="ellipse" src="./images/ex1_pic1.jpg" alt="">
+
+    <img class="polygon3" src="./images/ex1_pic1.jpg" alt="">
+    <img class="polygon4" src="./images/ex1_pic1.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #faa;
+            transition: .5s;
+            /* float: left; */
+            margin: 10px;
+        }
+
+        .box-wrap:hover .translate {
+            transform: translate(150px, 150px);
+        }
+
+        .box-wrap:hover .rotate {
+            transform: rotate(80deg);
+            /* rotate旋轉 */
+        }
+
+        .box-wrap:hover .scale {
+            transform: scale(1.2);
+            /* scale縮放括弧內顯示倍率 */
+        }
+
+        .box-wrap:hover .skewX {
+            transform: translateX(100px) rotate(720deg);
+            /* 多重transform不能分成多個transform,要使用多個參數結合使用,順序不同會影響效果展現 */
+            /* skew是xy移動變成矩形 */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box-wrap">
+        <div class="box translate">translate</div>
+    </div>
+
+    <div class="box-wrap">
+        <div class="box rotate">rotate</div>
+    </div>
+
+    <div class="box-wrap">
+        <div class="box scale">scale</div>
+    </div>
+
+    <div class="box-wrap">
+        <div class="box skewX">skewX</div>
+    </div>
+
+</body>
+
+</html>

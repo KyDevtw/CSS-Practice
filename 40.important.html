@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>important</title>
+
+
+    <style>
+        #h1ID{
+            color: magenta;
+            /* id權限大於class, element */
+        }
+
+        h1.h1Class{
+            color: lightpink;
+        }
+
+        .h1Class.h1Class2.h1Class3.h1Class4.h1Class5{
+            color: lightseagreen;
+        }
+
+
+        h1{
+            color: blueviolet !important;
+        }
+
+        h1.h1Class{
+            color: rgb(192, 228, 205) !important;
+            /* important可以蓋掉inline-style */
+            /* inline-style可以蓋掉id */
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <h1 id="h1ID" class="h1Class h1Class2 h1Class3 h1Class4 h1Class5" style="color: black;">
+        Hello World</h1>
+</body>
+</html>

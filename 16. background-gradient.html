@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <style>
+        .box {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .grad1 {
+            background: linear-gradient(rgb(243, 184, 184), rgb(250, 233, 201), rgb(243, 243, 196), rgb(173, 235, 173), rgb(163, 163, 235));
+            /* linear-gradient只能下在background屬性 */
+            /* 個顏色用逗號隔開 */
+        }
+
+        .grad2 {
+            background: linear-gradient(to right, rgb(243, 184, 184), rgb(250, 233, 201), rgb(243, 243, 196), rgb(173, 235, 173), rgb(163, 163, 235));
+            /* to 加方向指定方向,預設bottom */
+
+        }
+
+        .grad3 {
+            background: linear-gradient(75deg, rgb(243, 184, 184), rgb(250, 233, 201), rgb(243, 243, 196), rgb(173, 235, 173), rgb(163, 163, 235));
+            /* 用0-360度做角度,度數用deg */
+
+        }
+
+        .grad4 {
+            background: linear-gradient(to left, rgb(243, 184, 184)50%, rgb(250, 233, 201), rgb(243, 243, 196), rgb(173, 235, 173), rgb(163, 163, 235));
+            /* 顏色後接百分比,像ai的漸層拉bar */
+
+        }
+
+        .grad5 {
+            background: linear-gradient(to left, rgb(243, 184, 184), rgba(250, 233, 201, 0));
+            /* 用rgba做alpha通道 */
+        }
+
+        .grad6 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+            /* 多重漸層 */
+        }
+
+        .grad7 {
+            background: linear-gradient(rgb(255, 0, 0) 50%, rgb(159, 159, 250) 50%);
+            ;
+            background-size: 20px 20px;
+            /* 套用size會以size的矩形四方連續填滿background */
+        }
+
+        .grad8 {
+            background: repeating-linear-gradient(rgb(196, 154, 176), rgb(255, 251, 220) 25%);
+            /* repeating-linear-gradient重複漸層 */
+            /* 最後參數會依照高度比例分配,直到滿100% */
+        }
+
+        .grad9 {
+            background: radial-gradient(rgb(240, 248, 125), yellow 25%, rgb(195, 250, 93) 100%);
+            /* 長寬為background的長寬拉比例 */
+            /* 放射狀漸層 */
+        }
+
+        .grad10 {
+            background: radial-gradient(circle, rgb(255, 219, 59), yellow 25%, rgb(63, 188, 204) 100%);
+            /* 長寬為background的長寬拉比例 */
+            /* 放射狀漸層加circle參數,讓放射狀強制為正圓 */
+        }
+
+        .grad11 {
+            height: 300px;
+            background: radial-gradient(at 80% 80px, rgb(223, 152, 152), purple);
+            /* 可是設定圓心位置,第一個是x值,第二個是y值,單位可以是px也可以是% */
+        }
+
+        .grad12 {
+            height: 500px;
+            background: radial-gradient(circle at 80% 80px, rgb(223, 152, 152), purple);
+            /* 可是設定圓心位置,第一個是x值,第二個是y值,單位可以是px也可以是% */
+            /* circle at設定正圓圓心 */
+        }
+
+        .grad13 {
+            background: repeating-radial-gradient(circle, rgb(178, 226, 253), rgb(214, 238, 127) 8%, rgb(255, 142, 66) 16%, rgb(248, 134, 130) 25%);
+            /* 重複-放射狀漸層 */
+        }
+
+        .grad13:hover {
+            background: repeating-radial-gradient(circle, rgb(178, 226, 253), rgb(214, 238, 127) 15%, rgb(255, 142, 66) 24%, rgb(248, 134, 130) 39%);
+            /* 重複-放射狀漸層 */
+        }
+
+        .gradient_words {
+            width: 100%;
+            height: 300px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 100px;
+            text-align: center;
+            line-height: 300px;
+            background: linear-gradient(to right, rgb(142, 238, 150), rgba(253, 181, 88, 0),rgb(253, 181, 88) 40%), linear-gradient(to right, rgb(76, 239, 245), rgba(59, 252, 242, 0)50%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+    <div class="box grad8"></div>
+    <div class="box grad9"></div>
+    <div class="box grad10"></div>
+    <div class="box grad11"></div>
+    <div class="box grad12"></div>
+    <div class="box grad13"></div>
+    <h1 class="gradient_words">Hello, World</h1>
+
+</body>
+
+</html>

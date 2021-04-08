@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgb(170, 249, 255);
+            transition: .5s;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-top: 100px;
+            background-color: rgb(83, 163, 168);
+            transition: 100s ease;
+            /* transition參數第一個是秒數 第二是動態速率 */
+        }
+
+        .translate:hover {
+            transform: translate(150px, 150%);
+            /* transform變形,改變自己的位置,translatex改變x軸,translatey改變y軸,translate(x,y) */
+            /* transform是座標值的轉換 */
+            /* 單位可以是% px */
+
+        }
+
+        .rotate:hover{
+            transform: rotate(120000deg);
+        }
+
+        .translate{
+            transform-origin: 20px 10px ;
+            /* transform-origin改變變形中心位置(x,y) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box translate">translate</div>
+    <div class="box2 rotate">translate</div>
+    </div>
+</body>
+
+</html>

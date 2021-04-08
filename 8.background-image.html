@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map{
+            width: 800px;
+            height: 450px;
+            /* background-image: url(./images/map1.jpg); */
+            background: url(./images/map1.jpg);
+            /* background最後寫的話會吃掉background的子選項ex.background-image */
+            background-size: auto;
+            margin: 0 auto;
+            transition: .5s;
+        }
+
+        .map:hover{
+            background: url('./images/1.png') center center repeat-y, url('./images/2.png') left center no-repeat, url('./images/3.png') right center no-repeat, url('./images/map1.jpg');
+            background-size: 10%, 10%, 10%, auto;
+            /* background-image設定多圖片的話,rpeat等屬性就要像image一樣額外寫backgroun-repeat */
+            /* url() 水平 垂直 重複 */
+            /* background-size在後一樣用逗號分隔控制 */
+            /* no-repeat可以不重複,repeat四方連續,repeat-x(y)可以垂直水平repeat */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="map"></div>
+</body>
+</html>

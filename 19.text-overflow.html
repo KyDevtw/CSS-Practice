@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overflow</title>
+    <style>
+        .container{
+            width: 70%;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        .demo1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* white-space是指文字後空白處,nowrap就是不換行,會強制成單行然後溢版 */
+            /* overflow會遮住溢版外的內容 */
+            /* text-overflow: ellipsis產生... */
+            /* 後三項要一起執行才會有刪節號效果 */
+        }
+
+        .demo2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: justify;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            /* display: -webkit-box轉換區塊元素為box */
+            /* -webkit-line-clamp: 4 限制行數 */
+            /* -webkit-box-orient: vertical改變box的排列方向第一個box到最後的box成vertical排列 */
+            /* overflow: hidden溢版文字藏起來 */
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="demo1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe eveniet sed harum consequatur molestiae dolores, doloribus laudantium officiis nam nihil provident a odio sapiente eos aut tempore autem non omnis.</p>
+    </div>
+    <div class="container">
+        <p class="demo2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe eveniet sed harum consequatur molestiae dolores, doloribus laudantium officiis nam nihil provident a odio sapiente eos aut tempore autem non omnis.</p>
+    </div>
+    
+</body>
+</html>

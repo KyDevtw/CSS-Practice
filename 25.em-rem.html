@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em rem</title>
+
+    <style>
+        .box1{
+            font-size: 2em;
+        }
+        /* em會繼承父層的值運算,非1em就會疊加運算 */
+        /* 如果是1em是不會疊到因為都是1倍 */
+
+        .box{
+            font-size: 2rem;
+        }
+        /* rem會繼承html的值運算,不會因為父子層疊加 */
+        /* rem前面的父層更改數值不會影響到,因為他是抓root(html)的值 */
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>Hi</p>
+        <div class="box1">
+            <p>Hi</p>
+            <div class="box1">
+                <p>Hi</p>
+            </div> 
+        </div> 
+    </div>
+    <div class="box2">
+        <p>Hi</p>
+        <div class="box2">
+            <p>Hi</p>
+            <div class="box2">
+                <p>Hi</p>
+            </div> 
+        </div> 
+    </div>    
+    
+</body>
+</html>

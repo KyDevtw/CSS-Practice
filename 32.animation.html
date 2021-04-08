@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box{
+            width: 95px;
+            height: 95px;
+            background-color: rgb(144, 219, 238);
+            border-radius: 50%;
+
+            position: absolute;
+            left: 0px;
+            top:0px;
+
+            animation-name: pinpon;
+            animation-duration: 5s; 
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation參數可以分開寫 name是動畫keyframe設定名稱 duration是動畫秒數 timing-function是速率*/
+            /*  animation-name: 選擇動畫
+                animation-duration: 動畫持續時間
+                animation-timing-function: 動畫播放變速效果
+                animation-delay: 動畫延遲 
+                animation-iteration-count: 動畫播放次數
+                animation-direction: 動畫播放方向 normal(0~100%), reverse(100~0%), alternate(奇數次0-100%,偶數次100-0%), alternate-reverse(跟alternate相反)
+                animation-fill-mode: 動畫停止時顯示的畫面 none(預設), forwards(停在結束點), backwards(停在開始時), both(依次術或方向停在最後一個影格)
+                animation-play-state: 動畫狀態  paused, running, initial, inherit
+            */
+        }
+
+        .box:active{
+            animation-play-state: paused;
+
+        }
+        .box:hover{
+            animation-duration: 4s;
+
+        }
+
+        @keyframes pinpon {
+            0%{
+                left: 0;
+                top: 0;
+            }
+            50%{
+                left: 200px;
+                top: 150px;
+            }
+            100%{
+                left: 300px;
+                top: 0;
+            }
+            /* keyframe的from to可以用多個百分比代替 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

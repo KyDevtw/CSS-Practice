@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-shadow</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+
+        h1{
+            text-shadow:1px 1px 5px red;
+            /* x軸,y軸 blur 顏色 */
+            /* 如果不要blur就打三個參數即可 */
+
+        }
+
+        .shadow2{
+            text-shadow: 0 0 4px pink, 0 0 8px purple;
+            /* 跟box-shadow一樣可以多重陰影,先打出來的疊在上面 */
+        }
+
+        .shadow3{
+            text-shadow: 1px 1px rgb(70, 70, 70), 1px 2px rgb(119, 119, 119), 2px 2px rgb(231, 231, 231);
+        }
+    </style>
+</head>
+<body>
+    <h1>Shadow</h1>
+    <h1 class="shadow2">Shadow</h1>
+    <h1 class="shadow3">Shadow</h1>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #ccc;;
+        }
+
+        .card {
+            width: 60%;
+            /* min-height: 200px; */
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+
+            margin: 100px 30px;
+            box-shadow: 3px 3px 5px rgb(133, 133, 133);
+            padding: 0px 0 50px 0;
+
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner {
+            height: 100px;
+            background: linear-gradient(rgba(255, 255, 255, 0.3), rgb(255, 255, 255, .6)), url('./images/flowers.jpg');
+            background-size: cover;
+        }
+
+        .figure {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: url('./images/ex1_pic1.jpg');
+            background-size: 100%;
+            margin: -50px auto 0;
+            /* margin負值可以往上拉 */
+
+            /* position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%); */
+        }
+
+        h3 {
+            margin: 10px auto;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            /* padding-top: 60px; */
+            padding-bottom: 10px;
+            width: 60%;
+        }
+
+        p {
+            text-align: center;
+            /* font-size: 2rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card card1">
+        <div class="banner"></div>
+        <div class="figure">
+            <!-- <img src="" alt=""> -->
+        </div>
+        <h3>Jean</h3>
+        <p>Hello, nice to meet you.</p>
+    </div>
+
+
+
+</body>
+
+</html>
